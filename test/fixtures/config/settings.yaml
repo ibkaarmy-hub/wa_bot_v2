@@ -1,0 +1,29 @@
+clinic_name: "Urgent Care At Home"
+booking_mode: review          # review | auto  (phase 2 uses this)
+timezone: Asia/Singapore
+human_idle_hours: 12
+close_after_hours: 72
+approval_timeout_minutes: 15
+handoff_realert_minutes: 5    # re-alert doctors as URGENT after this; patient told to expect a call after double
+relay_tick_seconds: 30        # how often the relay checks for unclaimed hand-offs
+plato_poll_minutes: 10
+address_retention_days: 30
+history_turns_for_llm: 6
+urgent_triggers:
+  - chest pain
+  - cannot breathe
+  - can't breathe
+  - not breathing
+  - unresponsive
+  - unconscious
+  - heavy bleeding
+  - stroke
+  - seizure
+  - fitting
+templates:
+  doctor_alert: doctor_alert        # utility template, 1 body param: summary
+  reminder: visit_reminder
+  doctor_will_call: doctor_will_call
+  visit_changed: visit_changed
+meta:
+  echo_field: smb_message_echoes    # Coexistence echo webhook field — confirm at setup
