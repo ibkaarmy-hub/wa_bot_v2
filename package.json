@@ -1,0 +1,35 @@
+{
+  "name": "housecall-bot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "tsx watch src/main.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/main.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check": "tsx src/config/check.ts",
+    "migrate": "tsx src/adapters/postgres/migrate.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "smoke:stub": "node scripts/meta-stub.mjs",
+    "smoke:send": "node scripts/send-webhook.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.126.0",
+    "fastify": "^5.0.0",
+    "pg": "^8.13.0",
+    "yaml": "^2.6.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/pg": "^8.11.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}

@@ -1,0 +1,1 @@
+{"object":"whatsapp_business_account","entry":[{"id":"WABA1","changes":[{"field":"smb_message_echoes","value":{"messaging_product":"whatsapp","metadata":{"display_phone_number":"6590000000","phone_number_id":"PN1"},"message_echoes":[{"from":"6590000000","to":"6591234567","id":"wamid.ECHO1","timestamp":"1758000020","type":"text","text":{"body":"Hi, Dr A here"}}]}}]}]}

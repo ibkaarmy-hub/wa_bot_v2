@@ -1,0 +1,39 @@
+menu: |
+  Hi, this is {clinic_name}. I can help with:
+  1. Booking a home visit
+  2. Questions about our service (hours, fees, areas)
+  3. Speaking to a doctor
+  Just tell me what you need.
+emergency: |
+  If this is a medical emergency, please call 995 now or go to the nearest A&E.
+  I've alerted our on-duty doctor as well.
+handoff: |
+  Thank you. I've passed this to our on-duty doctor, who will message you here shortly.
+booking_handoff: |
+  Thanks — I've sent your request to our on-duty doctor, who will message you here shortly to arrange the visit.
+faq_intro: ""
+
+# --- Doctor relay: patient-facing ---
+doctor_joined: "{doctor_name} is with you now and will reply here."
+bot_resumed: "This chat is back with the {clinic_name} assistant. Message us any time."
+handoff_unclaimed: |
+  Sorry for the wait — our doctors are with patients right now. A doctor will contact you as soon as possible.
+
+# --- Doctor relay: doctor-facing (sent to the doctor's own WhatsApp) ---
+doctor_took: "You have {code} ({patient_phone}). Reply here to message them. Send #bot {code} to hand back to the assistant."
+doctor_released: "{code} is back with the assistant."
+doctor_unknown_code: "No patient with code {code}. Send #list to see yours."
+doctor_not_pending: "{code} is not waiting for a doctor right now."
+doctor_not_taken: "You have not taken {code} yet. Send #take {code} first."
+doctor_taken_by_other: "{code} is already with {doctor_name}."
+doctor_no_active: "No active patient. Start your reply with the patient's code (e.g. \"P7K on my way\") or send #list."
+doctor_relayed_to: "→ {code}"
+doctor_list_header: "Your patients:"
+doctor_list_empty: "You have no patients right now."
+doctor_help: |
+  #take CODE – take a patient
+  #bot CODE – hand back to the assistant
+  #list – your patients
+  Start a reply with the CODE to message that patient, or just reply to message your last patient.
+doctor_call_unavailable: "Calls are not available yet."
+doctor_window_closed: "Could not deliver your reply to {code}: the patient has not messaged in 24 hours, so WhatsApp blocks free-text replies. They need to message us first."
